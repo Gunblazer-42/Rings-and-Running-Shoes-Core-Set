@@ -4,7 +4,7 @@ A FoundryVTT version of the core rulebook for [Rings &amp; Running Shoes](https:
 * The Playbooks in the core rulebook (currently just the descriptions)
 * The Features for each Playbook, for multibook purposes.
 * The Moves for each Playbook, coded to use their respective Attributes when applicable.
-* The PBTA System configuration sheet that synergizes with this module plus all "official" modules released by me.
+* The PBTA System configuration sheet that synergizes with this module plus all "official" modules released by me, located in the /packs/ folder.
 # How to use the R&RS Config File
 * After installing the PBTA Game System and creating a world like usual, click on the gears on the sidebar to bring up the configuration menu, and then click on Configure Settings.
 <img width="378" height="855" alt="Step1" src="https://github.com/user-attachments/assets/0729fef5-4f1f-4c21-a442-9246f8479fa4" />
