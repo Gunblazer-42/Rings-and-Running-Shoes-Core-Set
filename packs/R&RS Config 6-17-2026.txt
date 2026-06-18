@@ -1,0 +1,299 @@
+# Configure Rolls
+rollFormula = "2d6"
+statToggle = "Momentum"
+rollShifting = "true"
+
+# Define roll result ranges.
+[rollResults]
+  [rollResults.failure]
+    range = "6-"
+    label = "Failure!"
+  [rollResults.partial]
+    range = "7-9"
+    label = "Mixed Success!"
+  [rollResults.success]
+    range = "10-11"
+    label = "Success!"
+  [rollResults.critical]
+  	range = "12+"
+    label = "Star Attribute Success!"
+  # Define groups for moves.
+  [character.moveTypes.basic]
+  	label = "Basic Moves"
+    creation = "true"
+    playbook = "false"
+  [character.moveTypes.class]
+  	label = "Playbook Moves"
+    playbook = "true"
+########################################
+## CHARACTERS ##########################
+########################################
+# Define the character group.
+[character]
+
+  # Define stats.
+  [character.stats]
+    Style = "Style"
+    Force = "Force"
+    Smarts = "Smarts"
+    Attitude = "Attitude"
+    Mystic = "Mystic"
+    Teamwork = "Teamwork"
+  # Define attributes.
+  [character.attributesTop]
+    [character.attributesTop.stamina]
+      type = "Clock"
+      label = "Natural Stamina"
+      max = 6
+      playbook = [
+      "the-lead",
+      "the-tinker",
+      "the-guardian",
+      "the-changed",
+      "the-rogue",
+      "the-destined",
+      "the-clumsy",
+      "the-masked",
+      "the-professional",
+      "the-edge",
+    	 ]
+    [character.attributesTop.duo1stamina]
+      type = "Clock"
+      label = "Character 1's Stamina"
+      max = 4
+      playbook = "the-duo"
+    [character.attributesTop.duo2stamina]
+      type = "Clock"
+      label = "Character 2's Stamina"
+      max = 4
+      playbook = "the-duo"
+    [character.attributesTop.changedstamina]
+    	type = "Clock"
+      label = "Artificial Stamina"
+      max = 6
+      playbook = "the-changed"
+    [character.attributesTop.roboticstamina]
+      type = "Clock"
+      label = "Artificial Stamina"
+      max = 6
+      playbook = "the-robot"
+    [character.attributesTop.remotestamina]
+    	type = "Clock"
+      label = "Remote's Stamina"
+      max = 2
+      playbook = "the-remote"
+    [character.attributesTop.armor]
+      type = "Number"
+      label = "Armor"
+    [character.attributesTop.momentum]
+      type = "Xp"
+      label = "Momentum"
+      max = 5
+    [character.attributesTop.xp]
+      type = "Xp"
+      label = "XP"
+      max = 5
+    [character.attributesTop.rings]
+      type = "Resource"
+      label = "Rings"
+      max = 3
+    [character.attributesTop.karmapoints]
+    	type = "Number"
+      label = "Karma Points"
+      playbook = "the-clumsy"
+    [character.attributesTop.SignalPower]
+    	type = "Resource"
+      label = "Signal Power"
+      max = 5
+      playbook = "the-remote"
+# Define sidebar details.
+  [character.attributesLeft]
+  	[character.attributesLeft.AbilityType]
+    type = "ListOne"
+    label = "Ability Type"
+    description = "The character's current Ability Type."
+    options = [
+    	"Power",
+      "Speed",
+      "Construct",
+      "Empathy",
+      "Support"
+     ]
+     [character.attributesLeft.AttributeStar]
+    type = "ListMany"
+    label = "Star Attributes"
+    description = "List of Star Attributes."
+    options = [
+    	"Style",
+      "Force",
+      "Smarts",
+      "Attitude",
+      "Mystic"
+      ]
+     [character.attributesLeft.ChangedMood]
+     type = "ListOne"
+     label = "Changed's Path"
+     description = "The Changed's current Path."
+     options = [
+     	"Curse",
+      "Blessing",
+      "Balance (Advanced)"
+      ]
+      playbook = "the-changed"
+     [character.attributesLeft.ability]
+      type = "LongText"
+      label = "Natural Ability"
+      playbook = [
+      "the-lead",
+      "the-tinker",
+      "the-guardian",
+      "the-changed",
+      "the-rogue",
+      "the-destined",
+      "the-clumsy",
+      "the-masked",
+      "the-professional",
+      "the-remote",
+      "the-edge",
+      ]
+     [character.attributesLeft.robofeature]
+      type = "LongText"
+      label = "Function"
+      playbook = "the-robot"
+     [character.attributesLeft.roboability]
+      type = "LongText"
+      label = "Artificial Ability"
+      playbook = [
+      "the-robot",
+      "the-changed"
+      ]
+    [character.attributesLeft.maskedability]
+    type = "LongText"
+      label = "Masked Ability"
+      playbook = "the-masked"
+    [character.attributesLeft.duo1ability]
+    type = "LongText"
+      label = "Character 1's Ability"
+      playbook = "the-duo"
+    [character.attributesLeft.duo2ability]
+    type = "LongText"
+      label = "Character 2's Ability"
+      playbook = "the-duo"
+    [character.attributesLeft.duotype]
+    	type = "Text"
+      label = "Duo Relationship"
+      playbook = "the-duo"
+    [character.attributesLeft.tinkermechanism]
+    	type = "LongText"
+      label = "Mechanism"
+      playbook = "the-tinker"
+    [character.attributesLeft.tinkerslot1]
+    	type = "Text"
+      label = "Mech. Slot 1"
+      playbook = "the-tinker"
+    [character.attributesLeft.tinkerslot2]
+    	type = "Text"
+      label = "Mech. Slot 2"
+      playbook = "the-tinker"
+    [character.attributesLeft.tinkerslot3]
+    	type = "Text"
+      label = "Mech. Slot 3"
+      playbook = "the-tinker"
+    [character.attributesLeft.tinkerslot4]
+    	type = "Text"
+      label = "Mech. Slot 4"
+      playbook = "the-tinker"
+    [character.attributesLeft.tinkerexpertise]
+    	type = "Text"
+      label = "Expertise"
+      playbook = "the-tinker"
+    [character.attributesLeft.guardiantreasure]
+    	type = "LongText"
+      label = "Treasure"
+      playbook = "the-guardian"
+    [character.attributesLeft.destinedflaw]
+    	type = "ListMany"
+      label = "Flaws"
+      options = [
+      "From a Different World/Time",
+      "Memory Loss",
+      "In Over Their Head",
+      "Mysterious",
+      "Withdrawn",
+      "Unstable",
+      "Restless",
+      ]
+      playbook = "the-destined"
+    [character.attributesLeft.roguegoal]
+    	type = "ListMany"
+      label = "Goal"
+      options = [
+      "Treasures",
+      "Power",
+      "Heart",
+      "Revenge",
+      "Orders",
+      ]
+      playbook = "the-rogue"
+     [character.attributesLeft.roguemethod]
+     type = "ListMany"
+     label = "Method"
+     options = [
+     "Destruction (Force)",
+     "Trickery (Style)",
+     "Manipulation (Attitude)",
+     "Scheming (Smarts)",
+     "Corruption (Mystic)",
+     "Control (Teamwork)",
+     ]
+     playbook = "the-rogue"
+     [character.attributesLeft.remoteintel]
+    	type = "Text"
+      label = "Intel Expertise"
+      playbook = "the-remote"
+     [character.attributesLeft.professionaljob]
+    	type = "Text"
+      label = "Job"
+      playbook = "the-professional"
+  # Define groups for equipment.
+  [character.equipmentTypes]
+  	feature = "Playbook Feature Components"
+    feature2 = "Multiclass Playbook Feature"
+    gear = "Gear & Pets"
+# Define description page details.
+	[character.description.physicaldes]
+  	label = "Physical Description"
+  [character.description.bio]
+  	label = "Biography"
+  [character.description.personality]
+  	label = "Personality & Character"
+########################################
+## NPCS ################################
+########################################
+# Define stats.
+[npc]
+  # Define attributes.
+  [npc.attributesTop]
+    [npc.attributesTop.harm]
+      type = "Resource"
+      label = "Harm"
+    [npc.attributesTop.damage]
+      type = "Roll"
+      label = "Damage"
+      default = "d6"
+    [npc.attributesTop.loot]
+      type = "Text"
+      label = "Loot"
+  [npc.attributesLeft]
+    [npc.attributesLeft.look]
+      type = "LongText"
+      label = "Look"
+    [npc.attributesLeft.drive]
+      type = "LongText"
+      label = "Drive"
+  [npc.equipmentTypes]
+  		type = "LongText"
+      label = "Gear"
+  # Define logical groups for moves.
+  [npc.moveTypes]
+    gm = "GM Moves"
