@@ -1,0 +1,33 @@
+{
+  "id": "rings-and-running-shoes-core-set",
+  "title": "Rings & Running Shoes Core Set",
+  "version": "1.0.0",
+  "manifest": "https://github.com/Gunblazer-42/RandRS-Core-Set/releases/latest/download/module.json",
+  "download": "https://github.com/Gunblazer-42/RandRS-Core-Set/releases/download/1.0.0/module.zip",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "description": "<p>The core Basic and Playbook Moves for Rings &amp; Running Shoes</p>",
+  "authors": [
+    {
+      "name": "Gunblazer42",
+      "discord": "Gunblazer42",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "rings-and-running-shoes-core",
+      "label": "R&RS Core Set",
+      "path": "packs/rings-and-running-shoes-core",
+      "type": "Item",
+      "system": "pbta",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "flags": {}
+}
