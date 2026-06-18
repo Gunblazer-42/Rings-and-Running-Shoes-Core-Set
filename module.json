@@ -1,9 +1,9 @@
 {
   "id": "rings-and-running-shoes-core-set",
   "title": "Rings & Running Shoes Core Set",
-  "version": "1.0.6",
-  "manifest": "https://github.com/Gunblazer-42/RandRS-Core-Set/releases/latest/download/module.json",
-  "download": "https://github.com/Gunblazer-42/RandRS-Core-Set/releases/download/1.0.6/module.zip",
+  "version": "1.0.7",
+  "manifest": "https://github.com/Gunblazer-42/Rings-and-Running-Shoes-Core-Set/releases/latest/download/module.json",
+  "download": "https://github.com/Gunblazer-42/Rings-and-Running-Shoes-Core-Set/releases/download/1.0.7/module.zip",
   "compatibility": {
     "minimum": "12",
     "verified": "13"
